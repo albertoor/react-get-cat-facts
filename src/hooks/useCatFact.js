@@ -4,13 +4,17 @@ import getRandomFact from '../services/getRandomFact';
 const useCatFact = () => {
   const [catFact, setCatFact] = useState('');
 
-  useEffect(() => {
+  const getFact = () => {
     getRandomFact().then(data => {
       setCatFact(decodeURI(data.fact));
     });
+  };
+
+  useEffect(() => {
+    getFact();
   }, []);
 
-  return catFact;
+  return { catFact, getFact };
 };
 
 export default useCatFact;
