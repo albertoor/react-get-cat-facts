@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react';
+import getRandomFact from '../services/getRandomFact';
 
 const useCatFact = () => {
   const [catFact, setCatFact] = useState('');
 
-  const getRandomFact = () => {
-    fetch('https://catfact.ninja/fact')
-      .then(res => res.json())
-      .then(result => setCatFact(decodeURI(result.fact)));
-  };
-
   useEffect(() => {
-    getRandomFact();
+    getRandomFact().then(data => {
+      setCatFact(data.fact);
+    });
   }, []);
 
   return catFact;
