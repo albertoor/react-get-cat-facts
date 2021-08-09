@@ -1,13 +1,11 @@
 import React from 'react';
-import useCatFact from './hooks/useCatFact';
+import Fact from './components/Fact';
 
 const App = () => {
-  const catFact = useCatFact();
-
   return (
     <div>
       <h1>Get Random Cat Fact!</h1>
-      <h2>{catFact}</h2>
+      <Fact />
     </div>
   );
 };
