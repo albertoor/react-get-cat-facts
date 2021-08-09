@@ -8,6 +8,7 @@ const Fact = () => {
   return (
     <div className="fact-container">
       <h2>😽 {catFact} 🐈</h2>
+      <button>Get other fact</button>
     </div>
   );
 };

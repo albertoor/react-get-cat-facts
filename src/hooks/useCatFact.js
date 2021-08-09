@@ -6,7 +6,7 @@ const useCatFact = () => {
 
   useEffect(() => {
     getRandomFact().then(data => {
-      setCatFact(data.fact);
+      setCatFact(decodeURI(data.fact));
     });
   }, []);
 
