@@ -1,0 +1,9 @@
+.fact-container {
+  width: 400px;
+  align-self: center;
+}
+
+h2 {
+  color: #eee;
+  margin: 1em;
+}
