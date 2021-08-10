@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useCatFact from '../hooks/useCatFact';
 import './Fact.css';
-import getRandomFact from '../services/getRandomFact';
 
 const Fact = () => {
   const catFact = useCatFact();
